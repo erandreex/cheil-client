@@ -1,0 +1,37 @@
+<div class="relative max-w-md mx-auto md:max-w-2xl mt-2 min-w-0 break-words w-full mb-6 rounded-xl" *ngIf="user">
+    <div class="px-6">
+        <div class="text-center mt-2">
+            <h3 class="text-2xl text-slate-100 font-bold leading-normal mb-1">{{ user.firstName }} {{ user.lastName }}</h3>
+            <div class="text-xs mt-0 mb-2 text-slate-400 font-bold uppercase">
+                <i class="fas fa-map-marker-alt mr-2 text-slate-400 opacity-75"></i>Cheil Worldwide
+            </div>
+        </div>
+    </div>
+
+    <div class="flex max-w justify-center bg-gray-900 text-white">
+        <div class="w-full">
+            <ul class="bg-gray-800 p-5 space-y-3">
+                <li class="flex justify-between p-3 bg-gray-700 rounded-md">
+                    <span class="font-medium">ID:</span>
+                    <span class="text-gray-300">{{ user.id }}</span>
+                </li>
+                <li class="flex justify-between p-3 bg-gray-700 rounded-md">
+                    <span class="font-medium">Firstname:</span>
+                    <span class="text-gray-300">{{ user.firstName }}</span>
+                </li>
+                <li class="flex justify-between p-3 bg-gray-700 rounded-md">
+                    <span class="font-medium">Lastname:</span>
+                    <span class="text-gray-300">{{ user.lastName }}</span>
+                </li>
+                <li class="flex justify-between p-3 bg-gray-700 rounded-md">
+                    <span class="font-medium">Role:</span>
+                    <span class="text-gray-300">{{ user.role }}</span>
+                </li>
+                <li class="flex justify-between p-3 bg-gray-700 rounded-md">
+                    <span class="font-medium">Email:</span>
+                    <span class="text-gray-300">{{ user.email }}</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

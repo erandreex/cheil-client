@@ -1,0 +1,18 @@
+.spaceee {
+    margin: 10px;
+}
+
+h1 {
+    max-width: 100%;
+    font-size: 50px;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    color: #540032;
+}
+
+.title {
+    background-image: url(https://cdn.pixabay.com/photo/2017/07/03/20/17/abstract-2468874_960_720.jpg);
+    background-attachment: fixed;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}

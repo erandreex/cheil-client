@@ -1,0 +1,77 @@
+<div *ngIf="open" id="myModal" class="modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+    <div class="modal-dialog bg-gray-800 rounded shadow-lg w-2/5">
+        <div class="modal-content">
+            <div class="modal-header flex justify-between p-4 border-b">
+                <h5 class="modal-title">User update</h5>
+            </div>
+            <div class="modal-body p-4">
+                <form *ngIf="!message" [formGroup]="formUpdate">
+                    <div class="mb-4">
+                        <label for="firstname" class="block text-gray-200">Firstname</label>
+                        <input
+                            type="text"
+                            id="firstname"
+                            name="firstname"
+                            class="border bg-slate-800 border-gray-500 rounded w-full py-2 px-3 mt-1"
+                            placeholder="Enter your firstname"
+                            required
+                            formControlName="FirstName"
+                        />
+                    </div>
+                    <div class="mb-4">
+                        <label for="lastname" class="block text-gray-200">Lastname</label>
+                        <input
+                            type="text"
+                            id="lastname"
+                            name="lastname"
+                            class="border bg-slate-800 border-gray-500 rounded w-full py-2 px-3 mt-1"
+                            placeholder="Enter your lastname"
+                            required
+                            formControlName="LastName"
+                        />
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block text-gray-200">Email</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            class="border bg-slate-800 border-gray-500 rounded w-full py-2 px-3 mt-1"
+                            placeholder="Enter your email"
+                            required
+                            formControlName="Email"
+                        />
+                    </div>
+                </form>
+
+                <p *ngIf="message">
+                    {{ message }}
+                </p>
+            </div>
+            <div class="modal-footer p-4 border-t flex gap-2 justify-between">
+                <button
+                    *ngIf="!message"
+                    type="button"
+                    class="border border-pink-500 text-pink-500 bg-inherit py-2 px-4 rounded"
+                    (click)="toggleModal()"
+                >
+                    Close
+                </button>
+                <button *ngIf="!message" type="button" class="bg-lime-600 text-white py-2 px-4 rounded" (click)="updateUser()">Update</button>
+
+                <button
+                    *ngIf="message"
+                    type="button"
+                    class="border border-pink-500 text-pink-500 bg-inherit py-2 px-4 rounded"
+                    (click)="confirmAction()"
+                >
+                    Close
+                </button>
+
+                <button *ngIf="message" type="button" class="border border-lime-600 text-lime-600 py-2 px-4 rounded" (click)="confirmAction()">
+                    Ok
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

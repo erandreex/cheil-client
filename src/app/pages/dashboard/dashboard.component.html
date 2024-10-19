@@ -1,0 +1,85 @@
+<div class="flex justify-center align-middle">
+    <h1 class="text-3xl font-bold text-white my-4 mb-16">Welcome Mr. {{ firstname || "" }}</h1>
+    <div class=""></div>
+</div>
+
+<div class="flex flex-col">
+    <div class="header">
+        <div class="text-3xl font-bold text-gray-200 mb-4">Choose Your Option</div>
+    </div>
+    <a [routerLink]="'admin'">
+        <div class="each flex hover:shadow-lg select-none p-10 rounded-md border-lime-300 border mb-3 hover:border-gray-500 cursor-pointer">
+            <div class="left">
+                <div class="header text-lime-600 font-semibold text-2xl">Users admin</div>
+                <div class="desc text-gray-200">Shows the list of users and allows creating, editing, and deleting users.</div>
+            </div>
+            <div class="right m-auto mr-0">
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-gray-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                        />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </a>
+    <a [routerLink]="['/profile', id]">
+        <div class="each flex hover:shadow-lg select-none p-10 rounded-md border-lime-300 border mb-3 hover:border-gray-500 cursor-pointer">
+            <div class="left">
+                <div class="header text-lime-600 font-semibold text-2xl">Profile view</div>
+                <div class="desc text-gray-200">Allows a logged-in user to view and update their profile.</div>
+            </div>
+            <div class="right m-auto mr-0">
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-gray-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                        />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </a>
+
+    <a [routerLink]="['/documentation']">
+        <div class="each flex hover:shadow-lg select-none p-10 rounded-md border-lime-300 border mb-3 hover:border-gray-500 cursor-pointer">
+            <div class="left">
+                <div class="header text-lime-600 font-semibold text-2xl">Documentation</div>
+                <div class="desc text-gray-200">Provides a detailed overview of the project's features.</div>
+            </div>
+            <div class="right m-auto mr-0">
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-gray-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                        />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </a>
+</div>
+
+<div class="flex flex-1 justify-end">
+    <button class="mt-5">
+        <a (click)="logout()" class="relative inline-block text-sm font-medium text-white group active:text-white focus:outline-none focus:ring">
+            <span
+                class="absolute inset-0 transition-transform translate-x-0.5 translate-y-0.5 bg-white group-hover:translate-y-0 group-hover:translate-x-0"
+            ></span>
+
+            <span class="relative block px-8 py-3 bg-[#1A2238] border border-current">
+                <a> Logout </a>
+            </span>
+        </a>
+    </button>
+</div>

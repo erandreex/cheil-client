@@ -1,0 +1,25 @@
+<component-back-link></component-back-link>
+<br />
+<br />
+<br />
+
+<div class="bg-gray-800 p-5 rounded-lg shadow-md border border-gray-900 shadow-gray-950">
+    <component-user-card [user]="user"></component-user-card>
+
+    <div class="flex justify-center items-center">
+        <button
+            (click)="openUserUpdateModal()"
+            class="middle none center mr-3 rounded-lg border border-lime-600 py-3 px-6 font-sans text-xs font-bold uppercase text-lime-500 transition-all hover:opacity-75 focus:ring focus:ring-lime-200 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+            data-ripple-dark="true"
+        >
+            Update
+        </button>
+    </div>
+</div>
+
+<component-modal-user-update
+    [open]="openModalUpdateFlag"
+    (openChange)="openModalUpdateFlag = $event"
+    [user]="user"
+    (refreshList)="reloadUserList()"
+></component-modal-user-update>
