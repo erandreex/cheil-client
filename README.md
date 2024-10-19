@@ -6,4 +6,6 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## how to serve local
 
+Install dependecies `npm install`
+
 Run `ng dev`
