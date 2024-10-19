@@ -1,4 +1,4 @@
-# cheil-server
+# cheil-client
 
 # Angular info
 
